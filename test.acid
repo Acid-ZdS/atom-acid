@@ -1,49 +1,26 @@
-/*
-Bienvenue dans un fichier ou vous pouvez faire n'importe quoi,
-dans le cadre de vos tests, bien-entendu.
- */
+// Code honteusement volé à Dominus Carnufex.
 
-(use Data::)
+(define Bool (type (False True)))
 
-(use Data::Bool)
+(hastype (lambda Bool Bool Bool) and)
 
-((lambda x (+ x 2)) 6)
-
-(hastype (a -> a -> Bool) neq)
-(define neq (lambda (xs ys) (
-    not (eq xs ys)
+(define and (lambda (b1 b2) (
+    match b1 (
+        (True b2)
+        (False False)
+    )
 )))
 
-// Renvoie l'inverse d'un booléen
-(define inv (lambda (bool) (
+(hastype (lambda Bool Bool) not)
+
+(define not (lambda bool (
     match bool (
         (True False)
         (False True)
     )
 )))
 
-(use Data::Bool)
-
-(define String (List Char))
-
-(lambda )
-
-(hastype Bool isFive)
-(define isFive (lambda x (eq x 5)))
-
-(putchar 'H')
-
-(define String (List Char))
-
-(define StrArray (tuple (Int, String)))
-
-// Pas sûr que ça marche, mais c'est pour test la coloration
-(hastype (String -> (tuple)) print)
-(define print (lambda (str) (
-    match str (
-        ((ch) putchar(ch))
-        ((Cons ch xs) print(xs))
-    )
-)))
-
-(print "Hello World!")
+(putchar 'A')
+(putchar 'c')
+(putchar 'i')
+(putchar 'd')
