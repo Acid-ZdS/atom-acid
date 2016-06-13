@@ -1,0 +1,157 @@
+'comment': 'Functional language, created by the Zeste de Savoir community'
+'fileTypes': [
+    'acid'
+]
+'foldingStartMarker': '\\($'
+'foldingStopMarker': '\\s*)+$'
+'name': 'Acid'
+'patterns': [
+    {
+        'include': '#code'
+    }
+]
+'repository': {
+    'code':
+        'patterns': [
+            {
+                'include': '#keywords'
+            }
+            {
+                'include': '#numbers'
+            }
+            {
+                'include': '#comments'
+            }
+            {
+                'include': '#types'
+            }
+            {
+                'include': '#char'
+            }
+            {
+                'include': '#strings'
+            }
+            {
+                'include': '#define'
+            }
+            {
+                'include': '#use'
+            }
+            {
+                'include': '#std'
+            }
+            {
+                'include': '#ops'
+            }
+            {
+                'include': '#const'
+            }
+            {
+                'begin': '\\('
+                'end': '\\)'
+                'include': 'code'
+            }
+        ]
+    'keywords':
+        'patterns': [
+            {
+                'captures':
+                    '1':
+                        'name': 'keyword.acid'
+                'match': '\\b(lambda|tuple|type|hastype|match|define)\\b'
+                'name': 'meta.keyword.acid'
+            }
+        ]
+    'numbers':
+        'patterns': [
+            {
+                'captures':
+                    '1':
+                        'name': 'constant.numeric.acid'
+                'match': '\\b([0-9]+(\\.[0-9]+)?)\\b'
+                'name': 'meta.number.acid'
+            }
+        ]
+    'comments':
+        'patterns': [
+            {
+                'begin': '/\\*'
+                'end': '\\*/'
+                'name': 'comment.block.acid'
+            }
+            {
+                'begin': '//'
+                'end': '\\n'
+                'name': 'comment.line.double-slash.acid'
+            }
+        ]
+    'types':
+        'patterns': [
+            {
+                'match': '\\b(Int|Int8|Int16|Int32|Int64|Word8|Word16|Word32|Word64|Float|Double|Char)\\b'
+                'name': 'storage.type.acid'
+            }
+        ]
+    'char':
+        'patterns': [
+            {
+                'match': '\'((\\\\)?.)?\''
+                'name': 'string.quoted.single.acid'
+            }
+        ]
+    'strings':
+        'patterns': [
+            {
+                'match': '".*?"'
+                'name': 'string.quoted.double.acid'
+            }
+        ]
+    'define':
+        'patterns': [
+            {
+                'match': '\\((define) (([a-z]\\w*)|([A-Z]\\w*))'
+                'name': 'meta.definition.acid'
+                'captures':
+                    '1':
+                        'name': 'keyword.acid'
+                    '3':
+                        'name': 'entity.name.function.acid'
+                    '4':
+                        'name': 'entity.name.type.acid'
+            }
+        ]
+    'use':
+        'patterns': [
+            {
+                'match': '\\((use) (.*?)\\)'
+                'name': 'meta.using.acid'
+                'captures':
+                    '1':
+                        'name': 'keyword.acid'
+                    '2':
+                        'name': 'support.other'
+            }
+        ]
+    'std':
+        'patterns': [
+            {
+                'match': '\\b(putchar|getchar|abort|eq|neq|lt|le|gt|ge)\\b'
+                'name': 'support.function.acid'
+            }
+        ]
+    'ops':
+        'patterns': [
+            {
+                'match': '(\\+|-|\\/|\\*|negate|div|quot|mod|rem)'
+                'name': 'keyword.operator.acid'
+            }
+        ]
+    'const':
+        'patterns': [
+            {
+                'match': '\\b(True|False|Nil])\\b'
+                'name': 'constant.language.acid'
+            }
+        ]
+}
+'scopeName': 'source.acid'

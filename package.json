@@ -1,0 +1,27 @@
+{
+  "name": "atom-acid",
+  "main": "./lib/atom-acid",
+  "version": "0.0.0",
+  "description": "Acid syntax highlighting",
+  "keywords": [
+      "acid",
+      "syntax",
+      "highlighting",
+      "zds",
+      "zeste-de-savoir"
+  ],
+  "repository": "https://github.com/Acid-ZdS/atom-acid",
+  "license": "GPLv3",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
+  "dependencies": {
+  }
+}
