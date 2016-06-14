@@ -1,5 +1,7 @@
 // Code honteusement volé à Dominus Carnufex.
 
+(use Data::Bool)
+
 (define Bool (type (False True)))
 
 (hastype (lambda Bool Bool Bool) and)
@@ -24,3 +26,7 @@
 (putchar 'c')
 (putchar 'i')
 (putchar 'd')
+
+(define range (lambda (begin start) (
+    
+)))

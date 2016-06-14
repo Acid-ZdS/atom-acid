@@ -135,7 +135,7 @@
     'std':
         'patterns': [
             {
-                'match': '\\b(putchar|getchar|abort|eq|neq|lt|le|gt|ge)\\b'
+                'match': '\\b(putchar|getchar|abort|eq|neq|lt|le|gt|ge|and|or|not|xor|exp|ln|sqrt|sin|cos|tan|asin|acos|atan|sinh|cosh|tanh)\\b'
                 'name': 'support.function.acid'
             }
         ]
