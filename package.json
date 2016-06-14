@@ -1,7 +1,7 @@
 {
   "name": "atom-acid",
   "main": "./lib/atom-acid",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Acid syntax highlighting",
   "keywords": [
     "acid",
